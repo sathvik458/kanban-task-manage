@@ -32,6 +32,7 @@ model Task {
   title       String
   description String?
   status      TaskStatus @default(TODO)
+  priority    Priority   @default(NONE)
   order       Int        @default(0)
   projectId   String
   project     Project    @relation(fields: [projectId], references: [id], onDelete: Cascade)
@@ -44,4 +45,11 @@ enum TaskStatus {
   TODO
   IN_PROGRESS
   DONE
+}
+
+enum Priority {
+  NONE
+  LOW
+  MEDIUM
+  HIGH
 }

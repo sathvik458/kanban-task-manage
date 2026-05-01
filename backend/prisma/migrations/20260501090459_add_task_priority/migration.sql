@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `Task` ADD COLUMN `priority` ENUM('NONE', 'LOW', 'MEDIUM', 'HIGH') NOT NULL DEFAULT 'NONE';
